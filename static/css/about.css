@@ -133,7 +133,14 @@ header {
     margin: 0 auto !important;
   }
   .about-el .about-el-txt h2 {
+    font-size: 25px;
     margin: 40px 0;
+  }
+  .about-el .about-el-txt p {
+    font-size: 15px;
+  }
+  .about-el .about-el-txt #about-nom {
+    font-size: 30px;
   }
   .reverse {
     flex-direction: column;
