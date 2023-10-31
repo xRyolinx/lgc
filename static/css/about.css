@@ -107,6 +107,10 @@ header {
 .reverse {
   flex-direction: row-reverse;
 }
+.reverse .about-el-txt {
+  margin-left: 0;
+  margin-right: 30px;
+}
 
 @media (max-width: 850px) {
   main {
