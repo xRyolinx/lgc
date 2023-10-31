@@ -122,17 +122,17 @@ header {
   .about-el .about-el-img {
     width: 100%;
     max-width: 400px;
-    margin: 0 auto;
+    margin: 0 auto !important;
   }
   .about-el .about-el-txt {
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto !important;
   }
   .about-el .about-el-txt h2 {
     margin: 40px 0;
   }
   .reverse {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 }
 /* Fonts */

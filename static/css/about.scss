@@ -130,7 +130,6 @@ header {
         color: var(--bleu-fonce)
     }
 }
-
 .reverse {
     flex-direction: row-reverse;
 }
@@ -150,12 +149,12 @@ header {
         .about-el-img {
             width: 100%;
             max-width: 400px;
-            margin: 0 auto;
+            margin: 0 auto !important;
         }
         
         .about-el-txt {
             width: 100%;
-            margin: 0 auto;
+            margin: 0 auto !important;
 
             h2 {
                 margin: 40px 0;
@@ -164,7 +163,7 @@ header {
     }
 
     .reverse {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 }
 
