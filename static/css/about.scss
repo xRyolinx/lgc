@@ -1,0 +1,201 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /* desactiver bleu en appuyant sur des liens */
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important; 
+    -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important; 
+    outline: none !important;
+}
+
+
+body {
+    margin: 0;
+    background-image: url(/static/img/bg-with-colors.svg);
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+main {
+    padding: 0 50px;
+}
+
+// -------- title -------------
+header {
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 200px;
+
+    // background-color: red;
+
+    #circles {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        height: 50%;
+        z-index: -1;
+
+        svg {
+            height: 100%;
+        }
+    }
+
+    h1 {
+        font-size: 25px;
+        font-family: var(--montserrat-bold);
+        font-weight: bold;
+        color: var(--bleu-fonce);
+
+        margin: 0;
+        margin-left: 50px;
+        margin-bottom: -20px;
+    }
+}
+
+// ------- 2 by 2 blocks -----
+.about-el {
+    width: 100%;
+    padding-bottom: 150px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .about-el-img {
+        width: 30%;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .about-el-txt {
+        width: 50%;
+        align-self: stretch;
+        margin-left: 30px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        // background-color: green;
+
+        h2 {
+            font-size: 28px;
+            font-family: var(--montserrat-semibold);
+            text-align: center;
+            color: #101E48;
+
+            margin-top: 0;
+            margin-bottom: 50px;
+        }
+
+        p {
+            font-size: 20px;
+            font-family: var(--montserrat-regular);
+
+            margin: 0;
+        }
+    }
+
+    #about-nom {
+        font-size: 35px;
+        color: var(--bleu-fonce)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Fonts */
+
+@font-face {
+    font-family: PoppinsMd;
+    src: url(/static/fonts/Poppins/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: Pacifico;
+    src: url(/static/fonts/Pacifico/Pacifico-Regular.ttf);
+}
+
+@font-face {
+    font-family: Nobia-regular;
+    src: url(/static/fonts/Nobia/Nobia\ Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(/static/fonts/Montserrat/static/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Medium;
+    src: url(/static/fonts/Montserrat/static/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Light;
+    src: url(/static/fonts/Montserrat/static/Montserrat-Light.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-SemiBold;
+    src: url(/static/fonts/Montserrat/static/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(/static/fonts/Montserrat/static/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: Multi;
+    src: url(/static/fonts/Multi/MultiText-Regular.otf);
+}
+
+/* Var */
+:root {
+    /* colors */
+    --white-pure: #FFFFFF;
+
+    --white: #D8D8D8;
+    --black: #4d504a;
+    --gris: #C3D2E1;
+
+    --bleu-fonce: #1E3E89;
+
+
+    /* fonts */
+    --multi: Multi;
+    --montserrat-medium: Montserrat-Medium;
+    --montserrat-regular: Montserrat-Regular;
+    --montserrat-light: Montserrat-Light;
+    --montserrat-semibold: Montserrat-SemiBold;
+    --montserrat-bold: Montserrat-Bold;
+    --nobia-regular: Nobia-regular;
+    --pacifico: Pacifico;
+    --poppins-md: PoppinsMd;
+
+    // others
+    --padding-glob: 40px;
+}

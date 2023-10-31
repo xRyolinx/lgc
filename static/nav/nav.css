@@ -1,0 +1,199 @@
+/* Fonts */
+
+@font-face {
+    font-family: PoppinsMd;
+    src: url(/static/fonts/Poppins/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: Pacifico;
+    src: url(/static/fonts/Pacifico/Pacifico-Regular.ttf);
+}
+
+@font-face {
+    font-family: Nobia-regular;
+    src: url(/static/fonts/Nobia/Nobia\ Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(/static/fonts/Montserrat/static/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Medium;
+    src: url(/static/fonts/Montserrat/static/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Light;
+    src: url(/static/fonts/Montserrat/static/Montserrat-Light.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-SemiBold;
+    src: url(/static/fonts/Montserrat/static/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Multi;
+    src: url(/static/fonts/Multi/MultiText-Regular.otf);
+}
+
+/* Var */
+:root {
+    /* colors */
+    --white-pure: #FFFFFF;
+
+    --white: #D8D8D8;
+    --black: #4d504a;
+    --gris: #C3D2E1;
+
+    --bleu-fonce: #1E3E89;
+
+
+    /* fonts */
+    --multi: Multi;
+    --montserrat-medium: Montserrat-Medium;
+    --montserrat-regular: Montserrat-Regular;
+    --montserrat-light: Montserrat-Light;
+    --montserrat-semibold: Montserrat-SemiBold;
+    --nobia-regular: Nobia-regular;
+    --pacifico: Pacifico;
+    --poppins-md: PoppinsMd;
+}
+
+
+
+/* Nav */
+nav {
+    position: relative;
+    height: 70px;
+    min-height: 45px;
+    padding: 0 4rem 0 3rem;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: var(--bleu-fonce);
+
+    z-index: 900;
+}
+
+
+/* Mobile */
+/* @media (max-width: 992px) { */
+@media (max-width: 992px) {
+    nav {
+        height: 70px;
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+}
+
+
+/* Suite de navbar */
+#nav_add {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 60%;
+    height: auto;
+
+
+    z-index: 800;
+    /* background-color: blue; */
+}
+
+
+/* Mobile */
+@media (max-width: 992px) {
+    #nav_add {
+        position: absolute;
+        width: 100%;
+        padding: 0 0 0 1.1rem;
+        border-top: 1px solid var(--gris);
+
+        flex-direction: column;
+        justify-content: space-between;
+        
+        background-color: var(--bleu-fonce);
+        
+        margin-top: -300px;
+        transition: margin 0.6s;
+    }
+}
+
+
+/* Elements de la nav bar */
+#nav_marque {
+    height: 45%;
+    width: 20%;
+
+    margin-right: 3rem;
+
+    font-size: 1.5rem;
+    color: var(--white);
+    text-decoration: none;
+    text-align: start;
+}
+
+#nav_marque img, #nav_marque svg{
+    height: 100%;
+}
+
+
+.nav_el {
+    font-size: 14px;
+    font-weight: 500;
+
+    text-decoration: none;
+    font-family: var(--montserrat-medium);
+
+    color: var(--white);
+
+    padding: 6px 0;
+
+    border-bottom: 1.8px transparent solid;
+
+    transition: border 0.3s;
+}
+.nav_el:hover, .nav_el_selected {
+    /* font-weight: bold; */
+    border-bottom: 1.8px var(--white-pure) solid;
+    color: var(--white-pure);
+}
+.nav_el:hover a {
+    color: inherit;
+}
+/* Mobile */
+@media (max-width: 992px) {
+    .nav_el, .nav_el:hover {
+        padding: 20px 5px;
+        border: none;
+    }
+}
+
+
+/* Bouton */
+#nav_button {
+    display: none;
+    border: none;
+    padding: 0;
+    background-color: inherit;
+}
+#nav_button img, #nav_button svg {
+    cursor: pointer;
+    width:20px;
+    border: none;
+}
+@media (max-width: 992px) {
+    #nav_button {
+        display: block;
+    }
+}
