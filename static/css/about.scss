@@ -23,8 +23,12 @@ main {
 
 // -------- title -------------
 header {
+    display: flex;
+    justify-content: center;
+}
+#title {
     position: relative;
-    width: 400px;
+    width: auto;
     margin: 0 auto;
     margin-bottom: 50px;
 
@@ -34,7 +38,6 @@ header {
 
     height: 200px;
 
-    // background-color: red;
 
     #circles {
         position: absolute;
@@ -57,6 +60,23 @@ header {
         margin: 0;
         margin-left: 50px;
         margin-bottom: -20px;
+    }
+}
+
+@media (max-width: 500px) {
+    #title {
+        height: 130px;
+        
+
+        #circles {
+
+        }
+
+        h1 {
+            font-size: 20px;
+            margin-left: 30px;
+            margin-bottom: -10px;
+        }
     }
 }
 
@@ -116,6 +136,42 @@ header {
     }
 }
 
+.reverse {
+    flex-direction: row-reverse;
+}
+
+
+@media (max-width: 850px) {
+    main {
+        padding: 0 20px;
+    }
+    #title {
+        margin-bottom: 30px;
+    }
+    .about-el {
+        flex-direction: column;
+        padding-bottom: 120px;
+
+        .about-el-img {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .about-el-txt {
+            width: 100%;
+            margin: 0 auto;
+
+            h2 {
+                margin: 40px 0;
+            }
+        }
+    }
+
+    .reverse {
+        flex-direction: column-reverse;
+    }
+}
 
 
 

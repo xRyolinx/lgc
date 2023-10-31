@@ -18,8 +18,13 @@ main {
 }
 
 header {
+  display: flex;
+  justify-content: center;
+}
+
+#title {
   position: relative;
-  width: 400px;
+  width: auto;
   margin: 0 auto;
   margin-bottom: 50px;
   display: flex;
@@ -27,17 +32,17 @@ header {
   align-items: center;
   height: 200px;
 }
-header #circles {
+#title #circles {
   position: absolute;
   display: flex;
   align-items: center;
   height: 50%;
   z-index: -1;
 }
-header #circles svg {
+#title #circles svg {
   height: 100%;
 }
-header h1 {
+#title h1 {
   font-size: 25px;
   font-family: var(--montserrat-bold);
   font-weight: bold;
@@ -47,6 +52,16 @@ header h1 {
   margin-bottom: -20px;
 }
 
+@media (max-width: 500px) {
+  #title {
+    height: 130px;
+  }
+  #title h1 {
+    font-size: 20px;
+    margin-left: 30px;
+    margin-bottom: -10px;
+  }
+}
 .about-el {
   width: 100%;
   padding-bottom: 150px;
@@ -89,6 +104,37 @@ header h1 {
   color: var(--bleu-fonce);
 }
 
+.reverse {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 850px) {
+  main {
+    padding: 0 20px;
+  }
+  #title {
+    margin-bottom: 30px;
+  }
+  .about-el {
+    flex-direction: column;
+    padding-bottom: 120px;
+  }
+  .about-el .about-el-img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .about-el .about-el-txt {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .about-el .about-el-txt h2 {
+    margin: 40px 0;
+  }
+  .reverse {
+    flex-direction: column-reverse;
+  }
+}
 /* Fonts */
 @font-face {
   font-family: PoppinsMd;
