@@ -1,7 +1,19 @@
+// styles
 body {
+    width: 100%;
+
     background-image: url(/static/img/bg-with-colors.svg);
-    background-size: contain;
-    background-repeat: repeat;
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+#bg-color {
+    height: 100dvh;
+    width: 100vw;
+    position: fixed;
+    object-fit: cover;
+
+    z-index: -100;
 }
 
 main {
@@ -17,7 +29,7 @@ header {
     position: relative;
     width: auto;
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
     display: flex;
     justify-content: space-between;
@@ -62,111 +74,139 @@ header {
     }
 }
 
-// ------- 2 by 2 blocks -----
-.about-el {
+
+// ------- offres -----------
+#offres {
     width: 100%;
-    padding-bottom: 150px;
+
+    // background-color: blue;
+}
+
+.offre {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 250px;
+
+    margin: 50px auto;
+    padding: 30px 40px;
+
+    border-radius: 50px;
+
+    background-color: var(--bleu-tres-clair);
 
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+}
+
+.offre-title {
+    padding-bottom: 10px;
+    padding-right: 10px;
+    
+    font-size: 25px;
+    font-family: var(--montserrat-semibold);
+    color: var(--bleu-fonce);
+    
+    margin: 0;
+
+    // background-color: violet;
+}
+
+.offre-details {
+    flex-grow: 1;
+
+    font-family: var(--montserrat-regular);
+    font-size: 18px;
+
+    margin: 0;
+    padding: 10px 0;
+
+    color: var(--black);
+
+    // background-color: orange;
+}
+
+.offre-button-container {
+    width: 100%;
+
+    margin-top: auto;
+    padding-top: 10px;
+
+    // background-color: green;
 
 
-    .about-el-img {
-        width: 30%;
+    .offre-button {
+        display: block;
+        cursor: pointer;
 
-        img {
-            width: 100%;
-            object-fit: cover;
-        }
+        margin-left: auto;
+        padding: 10px 40px;
+
+        border: none;
+        border-radius: 30px;
+
+        font-family: var(--montserrat-regular);
+        letter-spacing: 0.5px;
+
+        color: var(--white-pure);
+        background-color: var(--bleu-clair);
     }
+}
 
-    .about-el-txt {
-        width: 50%;
-        align-self: stretch;
-        margin-left: 30px;
+.offre-plus-container {
+    display: flex;
+    justify-content: center;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    padding-bottom: 50px;
 
+    // background-color: red;
+
+    p {
+        margin: 0;
+
+        text-align: center;
+        text-decoration: underline;
+
+        cursor: pointer;
+
+        color: var(--bleu-fonce);
 
         // background-color: green;
-
-        h2 {
-            font-size: 28px;
-            font-family: var(--montserrat-semibold);
-            text-align: center;
-            color: #101E48;
-
-            margin-top: 0;
-            margin-bottom: 50px;
-        }
-
-        p {
-            font-size: 20px;
-            font-family: var(--montserrat-regular);
-
-            margin: 0;
-        }
     }
 
-    #about-nom {
-        font-size: 35px;
-        color: var(--bleu-fonce)
-    }
-}
-.reverse {
-    flex-direction: row-reverse;
-
-    .about-el-txt {
-        margin-left: 0;
-        margin-right: 30px;
+    p:active {
+        color: var(--black);
     }
 }
 
 
-@media (max-width: 850px) {
+
+@media (max-width: 500px) {
     main {
         padding: 0 20px;
     }
-    #title {
-        margin-bottom: 30px;
-    }
-    .about-el {
-        flex-direction: column;
-        padding-bottom: 120px;
-
-        .about-el-img {
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto !important;
-        }
-        
-        .about-el-txt {
-            width: 100%;
-            margin: 0 auto !important;
-
-            h2 {
-                font-size: 25px;
-                margin: 40px 0;
-            }
-
-            p {
-                font-size: 15px;
-            }
-
-            #about-nom {
-                font-size: 30px;
-            }
-        }
+    .offre {
+        padding: 25px 30px;
+        border-radius: 30px;
     }
 
-    .reverse {
-        flex-direction: column;
+    .offre-title {
+        font-size: 20px;
+    }
+
+    .offre-details {
+        font-size: 15px;
+    }
+    .offre-button-container {
+        .offre-button {
+            padding: 10px 35px;
+        }
     }
 }
+
+
+// PS : MUST DISABLE SELECTING BACKGROUND IMAGE
+
+
 
 
 

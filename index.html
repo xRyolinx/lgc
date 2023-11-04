@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LGC - Home</title>
 
+    <link rel="stylesheet" href="/static/css/global.css">
+
     <link rel="stylesheet" href="/static/nav/nav.css">
     <script src="/static/nav/nav.js"></script>
 
-    <link rel="stylesheet" href="/home.css">
+    <link rel="stylesheet" href="/static/css/home.css">
+    <script src="/static/js/home.js"></script>
 </head>
 <body>
+    <!-- bg colors -->
+    <img id="bg-color" src="/static/img/bg-with-colors.svg" alt="">
 
-    <!-- bg -->
+    <!-- hero section -->
     <div id="bg-home">
         <div class="bg-home-element">
             <img src="/static/img/Lgc building.jpg">
@@ -42,10 +47,10 @@
         </button>
 
         <div id="nav_add">
-            <a id="nav_home" class="nav_el nav_el_selected" href="/">Accueil</a>
-            <a id="nav_services" class="nav_el" href="">Offres d'emplois</a>
-            <a id="nav_rdv" class="nav_el" href="/templates/about.html">À propos</a>
-            <a id="nav_contact" class="nav_el" href="">Contact</a>
+            <a id="nav_home" data-name="index" class="nav_el" href="/">Accueil</a>
+            <a id="nav_services" data-name="offres" class="nav_el" href="/templates/offres.html">Offres d'emplois</a>
+            <a id="nav_rdv" data-name="about" class="nav_el" href="/templates/about.html">À propos</a>
+            <a id="nav_contact" data-name="contact" class="nav_el" href="">Contact</a>
         </div>
     </nav>
 
@@ -63,6 +68,62 @@
                 </h1>
             </div>
         </header>
+
+        <!-- testimonials -->
+        <div id="testimonials-big-container">
+            <div id="testimonials-container">
+                <!-- title -->
+                <div id="testimonials-title">
+                    <h1>Ils nous ont fait confiance</h1>
+                </div>
+                <!-- temoignanges -->
+                <div id="testimonials">
+                    <div id="testimonials-total">
+                        <div class="testimonial" style="opacity: 1;">
+                            <!-- content -->
+                            <div class="testimonial-content">
+                                <q>
+                                    MERCI BEACOUP 
+                                </q>
+                            </div>
+                            <div class="testimonial-name">
+                                <i>~ Manil1 ~</i>
+                            </div>
+                        </div>
+
+                        <div class="testimonial" style="opacity: 1;">
+                            <!-- content -->
+                            <div class="testimonial-content">
+                                <q>
+                                    MERCI BEACOUP 
+                                </q>
+                            </div>
+                            <div class="testimonial-name">
+                                <i>~ Manil2 ~</i>
+                            </div>
+                        </div>
+
+                        <div class="testimonial" style="opacity: 1;">
+                            <!-- content -->
+                            <div class="testimonial-content">
+                                <q>
+                                    MERCI BEACOUP 
+                                </q>
+                            </div>
+                            <div class="testimonial-name">
+                                <i>~ Manil3 ~</i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- buttons -->
+                <div id="testimonials-buttons">
+                    <p style="color: var(--black); cursor: default;" id="test-but-pre">&#8592;</p>
+                    <p id="test-but-suiv">&#8594;</p>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 </html>
