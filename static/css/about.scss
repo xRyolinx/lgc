@@ -1,11 +1,10 @@
-body {
-    background-image: url(/static/img/bg-with-colors.svg);
-    background-size: contain;
-    background-repeat: repeat;
-}
+// styles
 
+body {
+    background-color: var(--Ivory_White);
+}
 main {
-    padding: 0 50px;
+    // padding: 0 50px;
 }
 
 // -------- title -------------
@@ -65,7 +64,8 @@ header {
 // ------- 2 by 2 blocks -----
 .about-el {
     width: 100%;
-    padding-bottom: 150px;
+    padding: 60px 50px;
+    // padding-bottom: 120px;
 
     display: flex;
     justify-content: space-between;
@@ -73,7 +73,7 @@ header {
 
 
     .about-el-img {
-        width: 30%;
+        width: 40%;
 
         img {
             width: 100%;
@@ -82,9 +82,9 @@ header {
     }
 
     .about-el-txt {
-        width: 50%;
+        width: 60%;
         align-self: stretch;
-        margin-left: 30px;
+        margin-left: 100px;
 
         display: flex;
         flex-direction: column;
@@ -98,15 +98,19 @@ header {
             font-size: 28px;
             font-family: var(--montserrat-semibold);
             text-align: center;
-            color: #101E48;
+            // color: #101E48;
+            color: var(--bleu-fonce);
 
             margin-top: 0;
             margin-bottom: 50px;
         }
 
         p {
-            font-size: 20px;
             font-family: var(--montserrat-regular);
+            font-size: 18px;
+            line-height: 35px;
+
+            color: var(--black);
 
             margin: 0;
         }
@@ -114,29 +118,31 @@ header {
 
     #about-nom {
         font-size: 35px;
-        color: var(--bleu-fonce)
+        color: var(--noir-bleu);
     }
 }
 .reverse {
     flex-direction: row-reverse;
+    background-color: var(--blanc-casse);
 
     .about-el-txt {
         margin-left: 0;
-        margin-right: 30px;
+        margin-right: 100px;
     }
 }
 
+.pb-50 {
+    padding-bottom: 75px;
+}
 
-@media (max-width: 850px) {
-    main {
-        padding: 0 20px;
-    }
+@media (max-width: 800px) {
     #title {
         margin-bottom: 30px;
     }
     .about-el {
         flex-direction: column;
-        padding-bottom: 120px;
+        padding: 50px 20px;
+        padding-top: 60px;
 
         .about-el-img {
             width: 100%;
@@ -153,10 +159,7 @@ header {
                 margin: 40px 0;
             }
 
-            p {
-                font-size: 15px;
-            }
-
+            
             #about-nom {
                 font-size: 30px;
             }
@@ -166,6 +169,171 @@ header {
     .reverse {
         flex-direction: column;
     }
+
+    .pb-50 {
+        padding-bottom: 50px;
+    }
+}
+
+
+
+// ------------------------- TESTIMONIALS -----------------------------
+
+#testimonials-big-container {
+    width: 100%;
+
+    padding: 60px 0;
+
+    overflow-x: hidden;
+
+    background-color: var(--blanc-casse);
+}
+
+#testimonials-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#testimonials-title {
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 0 50px;
+
+    h1 {
+        width: 100%;
+        margin: 0;
+
+        font-size: 35px;
+        text-align: center;
+
+        font-family: var(--montserrat-bold);
+        color: var(--noir-bleu);
+    }
+}
+
+#testimonials {
+    position: relative;
+}
+
+#testimonials-total {
+    width: 300%;
+    padding: 40px 0;
+
+    position: absolute;
+    
+    display: flex;
+    align-items: start;
+}
+
+.testimonial {
+    opacity: 0;
+
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+
+    // background-color: var(--bleu-tres-clair);
+}
+
+.testimonial-content {
+    q {
+        font-size: 18px;
+        font-family: var(--montserrat-regular);
+        // font-weight: bold;
+        // font-style: italic;
+
+        letter-spacing: 1px;
+        line-height: 35px;
+
+        color: var(--black)
+    }
+}
+
+.testimonial-name {
+    width: 100%;
+    padding-top: 50px;
+
+    i {
+        display: block;
+        width: 100%;
+        text-align: end;
+
+        font-size: 18px;
+        font-style: italic;
+        color: var(--black)
+    }
+}
+
+#testimonials-buttons {
+    height: 30px;
+    width: 200px;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // img {
+    //     height: 100%;
+    // }
+    p {
+        font-size: 30px;
+        font-weight: bold;
+        color: var(--bleu-fonce);
+
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 900px) {
+    #testimonials-big-container {
+        padding: 50px 0;
+
+        #testimonials-container {
+            .testimonial {
+                padding: 0 20px;
+            }
+        }
+    }
+    #testimonials-title {
+        padding: 0 20px;
+    }
+}
+
+
+@media (max-width: 550px) {
+    
+    #testimonials-title {
+        margin-bottom: 10px;
+
+        h1 {
+            font-size: 30px;
+        }
+    }
+    // .testimonial-content q {
+    //     font-size: 16px;
+    //     line-height: 30px;
+    // }
+    // .testimonial-name i {
+    //     font-size: 12px;
+    // }
+    #testimonials-buttons {
+        p {
+            font-size: 50px;
+        }
+    }
+}
+
+// animation
+@keyframes visible {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 
@@ -173,82 +341,42 @@ header {
 
 
 
+// vars
 
-
-
-
-/* Fonts */
-
-@font-face {
-    font-family: PoppinsMd;
-    src: url(/static/fonts/Poppins/Poppins-Medium.ttf);
-}
-
-@font-face {
-    font-family: Pacifico;
-    src: url(/static/fonts/Pacifico/Pacifico-Regular.ttf);
-}
-
-@font-face {
-    font-family: Nobia-regular;
-    src: url(/static/fonts/Nobia/Nobia\ Regular.ttf);
-}
-
-@font-face {
-    font-family: Montserrat-Regular;
-    src: url(/static/fonts/Montserrat/static/Montserrat-Regular.ttf);
-}
-
-@font-face {
-    font-family: Montserrat-Medium;
-    src: url(/static/fonts/Montserrat/static/Montserrat-Medium.ttf);
-}
-
-@font-face {
-    font-family: Montserrat-Light;
-    src: url(/static/fonts/Montserrat/static/Montserrat-Light.ttf);
-}
-
-@font-face {
-    font-family: Montserrat-SemiBold;
-    src: url(/static/fonts/Montserrat/static/Montserrat-SemiBold.ttf);
-}
-
-@font-face {
-    font-family: Montserrat-Bold;
-    src: url(/static/fonts/Montserrat/static/Montserrat-Bold.ttf);
-}
-
-@font-face {
-    font-family: Multi;
-    src: url(/static/fonts/Multi/MultiText-Regular.otf);
-}
-
-/* Var */
 :root {
     /* colors */
-    --white-pure: #FFFFFF;
 
     --white: #D8D8D8;
+    --Ivory_White: #FDFDFD;
     --black: #4d504a;
-    --gris: #C3D2E1;
+
+    --noir-bleu: #002845;
+    --blanc-casse: #F8F9FC;
 
     --bleu-fonce: #1E3E89;
-    --bleu-clair: #7FCCF0;
-    --bleu-tres-clair: #CDDBF4;
+    --bleu-gris: #CDDBF4;
+    --bleu-clair: #E6FBFF;
+
+    --vert-medical: #1ABAB9;
+
+
+	--Charcoal_Gray: #333333;
+
+	--grey_border: #e1e1e1;
+	--grey: #84847C;
 
 
     /* fonts */
     --multi: Multi;
+
     --montserrat-medium: Montserrat-Medium;
     --montserrat-regular: Montserrat-Regular;
     --montserrat-light: Montserrat-Light;
     --montserrat-semibold: Montserrat-SemiBold;
     --montserrat-bold: Montserrat-Bold;
+    --montserrat-extrabold: Montserrat-ExtraBold;
+
     --nobia-regular: Nobia-regular;
     --pacifico: Pacifico;
     --poppins-md: PoppinsMd;
-
-    // others
-    --padding-glob: 40px;
 }

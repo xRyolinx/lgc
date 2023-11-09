@@ -2,10 +2,7 @@
 
 body {
     position: relative;
-
-    background-image: url(/static/img/bg-with-colors.svg);
-    background-repeat: repeat-y;
-    background-size: cover;
+    background-color: var(--blanc-casse);
 }
 
 #bg-color {
@@ -17,7 +14,7 @@ body {
     z-index: -100;
 }
 
-// ----------- nav ------------
+// ------------------------ nav ------------------------------
 @media (min-width: 992px) {
     nav {
         background: transparent !important;
@@ -26,7 +23,7 @@ body {
         margin-bottom: -11px !important;
     }
 }
-// ---------------------
+// ------------------------------------------------------------
 
 main {
     font-family: var(--montserrat-regular);
@@ -36,7 +33,144 @@ main {
 }
 
 
-// ----------------------------carousel------------------------
+// ---------------------------- Pourquoi Notre appareil  ------------------------
+#pourquoi-app {
+    padding: 50px;
+    background-color: var(--blanc-casse);
+}
+#pourquoi-title {
+    padding-bottom: 20px;
+    margin: 0;
+    
+    font-size: 30px;
+    font-family: var(--montserrat-bold);
+    text-align: center;
+    color: var(--noir-bleu);
+
+    // background-color: green;
+}
+
+#pourquoi-text {
+    font-size: 18px;
+    line-height: 35px;
+    font-family: var(--montserrat-regular);
+    color: var(--black);
+}
+
+#pourquoi-video {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 700px;
+
+    // background-color: blue;
+
+    iframe {
+        width: 100%;
+        aspect-ratio: 1.79;
+
+        // background-color: violet;
+    }
+    i {
+        padding-top: 10px;
+        display: block;
+        text-align: center;
+    }
+}
+
+@media (max-width: 850px) {
+    #pourquoi-app {
+        padding: 50px 20px;
+    }
+}
+
+// ---------------------------- Notre appareil  ------------------------
+#appareil {
+    padding: 50px;
+    background-color: var(--Ivory_White);
+}
+
+#appareil-title {
+    display: none;
+    padding-bottom: 20px;
+    margin: 0;
+    
+    font-size: 30px;
+    font-family: var(--montserrat-bold);
+    text-align: center;
+    color: var(--noir-bleu);
+
+    // background-color: green;
+}
+
+#appareil-infos {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: stretch;
+}
+
+#appareil-text {
+    width: 60%;
+    margin-right: 100px;
+    // background-color: violet;
+
+    h2 {
+        padding-bottom: 30px;
+        margin: 0;
+        
+        font-size: 30px;
+        font-family: var(--montserrat-bold);
+        color: var(--noir-bleu);
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 35px;
+        font-family: var(--montserrat-regular);
+        color: var(--black);
+
+        // background-color: green;
+    }
+}
+
+#appareil-img {
+    width: 40%;
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 100%;
+        aspect-ratio: 1;
+    }
+}
+
+@media (max-width: 850px) {
+    #appareil {
+        padding: 50px 20px;
+    }
+    #appareil-title {
+        display: block;
+    }
+    #appareil-text h2 {
+        display: none;
+    }
+
+    #appareil-infos {
+        // background-color: green;
+        flex-direction: column-reverse;
+    }
+    #appareil-img {
+        width: 100%;
+        margin: 30px 0;
+    }
+    #appareil-text {
+        width: 100%;
+    }
+}
+
+// ---------------------------- Hero section ------------------------
 
 #bg-home {
     position: absolute;
@@ -110,7 +244,7 @@ header {
             margin: 0;
             margin-bottom: 30px;
 
-            color: var(--white-pure);
+            color: white;
         }
 
         .title2 {
@@ -123,7 +257,7 @@ header {
 
             margin: 0;
 
-            color: var(--white-pure);
+            color: white;
         }
     }
 }
@@ -175,97 +309,74 @@ header {
     }
 }
 
-
-// ------------------------- TESTIMONIALS -----------------------------
-
-#testimonials-big-container {
+// ------------------------------- APP DISPONIBLE -------------------
+#app-dispo-container {
     width: 100%;
-
-    padding: 50px 20px;
-
-    overflow-x: hidden;
-
-    // background-color: var(--gris);
+    background: linear-gradient(-45deg, var(--Ivory_White), #5c7ecb);
 }
-
-#testimonials-container {
-    width: 100%;
+#app-dispo {
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 50px 50px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
 }
 
-#testimonials-title {
-    width: 100%;
-    margin-bottom: 40px;
+#app-phone {
+    height: 400px;
+    width: 40%;
+    margin-right: 50px;
+    // background-color: blue;
 
-    h1 {
-        width: 100%;
+    img {
+        display: block;
+        margin: 0 auto;
+        height: 100%;
+        aspect-ratio: 0.6;
+        // object-fit: cover;
+    }
+}
+
+#app-details {
+    // height: 100%;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    // background-color: red;
+}
+
+.app-details-text {
+    // background-color: green;
+
+    h2 {
         margin: 0;
 
-        font-size: 35px;
+        font-size: 30px;
+        font-family: var(--montserrat-bold);
+
         text-align: center;
+        color: var(--noir-bleu);
+    }
 
-        font-family: var(--montserrat-semibold);
-        color: var(--bleu-fonce);
+    p {
+        margin: 15px 0;
+
+        text-align: center;
+        font-size: 25px;
+        font-family: var(--montserrat-bold);
+        color: var(--noir-bleu);
     }
 }
 
-#testimonials {
-    position: relative;
-}
-
-#testimonials-total {
-    width: 300%;
-    padding: 40px 0;
-
-    position: absolute;
-    
-    display: flex;
-    align-items: start;
-}
-
-.testimonial {
-    opacity: 0;
-
-    width: 80%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-
-    // background-color: var(--bleu-tres-clair);
-}
-
-.testimonial-content {
-    q {
-        font-size: 18px;
-        font-family: var(--montserrat-regular);
-        // font-weight: bold;
-        // font-style: italic;
-
-        letter-spacing: 1px;
-        line-height: 35px;
-
-        color: var(--black)
-    }
-}
-
-.testimonial-name {
+.app-buttons {
+    flex-grow: 1;
     width: 100%;
-    padding-top: 50px;
-
-    i {
-        display: block;
-        width: 100%;
-        text-align: end;
-
-        font-size: 18px;
-        font-style: italic;
-        color: var(--bleu-fonce)
-    }
-}
-
-#testimonials-buttons {
-    height: 30px;
-    width: 200px;
+    max-width: 400px;
 
     margin: 0 auto;
 
@@ -273,132 +384,137 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    // img {
-    //     height: 100%;
-    // }
-    p {
-        font-size: 40px;
-        font-weight: bold;
-        color: var(--bleu-fonce);
+    // background-color: violet;
 
-        cursor: pointer;
+
+    .app-button {
+        height: 50px;
+
+        // background-color: #1ABAB9;
+
+        img {
+            height: 100%;
+
+            display: block;
+            margin: 0 auto;
+
+            cursor: pointer;
+        }
     }
 }
 
-@media (max-width: 900px) {
-    #testimonials-big-container {
-        padding-top: 50px;
-        padding-bottom: 50px;
+#app-details-text-mobile, #app-buttons-mobile {
+    display: none;
+}
+
+@media(max-width: 800px) and (min-width: 651px) {
+    #app-details {
+        .app-buttons {
+            flex-direction: column;
+            justify-content: center;
+
+            .app-button {
+                margin: 10px 0;
+            }
+        }
     }
 }
 
-@media (max-width: 700px) {
-    .testimonial-content q {
-        font-size: 19px;
+@media(max-width: 650px) {
+    #app-dispo {
+        flex-direction: column;
+        padding: 50px 20px;
     }
-    .testimonial-name i {
-        font-size: 17px;
+
+    #app-phone {
+        width: 100%;
+        margin: 80px auto;
+    }
+
+    #app-details {
+        .app-details-text {
+            display: none;
+        }
+        .app-buttons {
+            display: none;
+        }
+    }
+    #app-details-text-mobile {
+        display: block;
+
+        h2 {
+            font-size: 25px;
+        }
+        p {
+            margin-bottom: 0;
+            font-size: 18px;
+        }
+    }
+    #app-buttons-mobile {
+        display: flex;
+        height: 45px;
+        max-width: 320px;
+        margin-top: 20px;
+
+
+        .app-button {
+            height: 100%;
+        }
     }
 }
-@media (max-width: 550px) {
-    .testimonial-content q {
-        font-size: 18px;
-    }
-    .testimonial-name i {
-        font-size: 16px;
-    }
-}
-@media (max-width: 410px) {
-    .testimonial-content q {
-        font-size: 14px;
-    }
-    .testimonial-name i {
-        font-size: 12px;
-    }
-}
 
-// animation
-@keyframes visible {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
+@media (max-width: 360px) {
+    #app-buttons-mobile {
+        height: auto;
+
+        flex-direction: column;
+        justify-content: center;
+
+        .app-button {
+            height: 50px;
+            margin: 15px 0;
+        }
     }
 }
 
 
 
-
-
-
-
-/* Fonts */
-
-@font-face {
-    font-family: PoppinsMd;
-    src: url(/static/fonts/Poppins/Poppins-Medium.ttf);
-}
-
-@font-face {
-    font-family: Pacifico;
-    src: url(/static/fonts/Pacifico/Pacifico-Regular.ttf);
-}
-
-@font-face {
-    font-family: Nobia-regular;
-    src: url(/static/fonts/Nobia/Nobia\ Regular.ttf);
-}
-
-@font-face {
-    font-family: Montserrat-Regular;
-    src: url(/static/fonts/Montserrat/static/Montserrat-Regular.ttf);
-}
-
-@font-face {
-    font-family: Montserrat-Medium;
-    src: url(/static/fonts/Montserrat/static/Montserrat-Medium.ttf);
-}
-
-@font-face {
-    font-family: Montserrat-Light;
-    src: url(/static/fonts/Montserrat/static/Montserrat-Light.ttf);
-}
-
-@font-face {
-    font-family: Montserrat-SemiBold;
-    src: url(/static/fonts/Montserrat/static/Montserrat-SemiBold.ttf);
-}
-
-@font-face {
-    font-family: Multi;
-    src: url(/static/fonts/Multi/MultiText-Regular.otf);
-}
 
 /* Var */
 :root {
     /* colors */
-    --white-pure: #FFFFFF;
 
     --white: #D8D8D8;
+    --Ivory_White: #FDFDFD;
     --black: #4d504a;
-    --gris: #C3D2E1;
+
+    --noir-bleu: #002845;
+    --blanc-casse: #F8F9FC;
 
     --bleu-fonce: #1E3E89;
-    --bleu-clair: #7FCCF0;
-    --bleu-tres-clair: #CDDBF4;
+    --bleu-gris: #CDDBF4;
+    --bleu-clair: #E6FBFF;
+
+    --vert-medical: #1ABAB9;
+
+
+	--Charcoal_Gray: #333333;
+
+	--grey_border: #e1e1e1;
+	--grey: #84847C;
 
 
     /* fonts */
     --multi: Multi;
+
     --montserrat-medium: Montserrat-Medium;
     --montserrat-regular: Montserrat-Regular;
     --montserrat-light: Montserrat-Light;
     --montserrat-semibold: Montserrat-SemiBold;
+    --montserrat-bold: Montserrat-Bold;
+    --montserrat-extrabold: Montserrat-ExtraBold;
+
     --nobia-regular: Nobia-regular;
     --pacifico: Pacifico;
     --poppins-md: PoppinsMd;
-
-    // others
-    --padding-glob: 40px;
 }

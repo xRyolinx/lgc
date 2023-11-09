@@ -1,8 +1,6 @@
 // styles
 body {
-    background-image: url(/static/img/bg-with-colors.svg);
-    background-size: contain;
-    background-repeat: repeat;
+    background-color: var(--blanc-casse);
 }
 
 #bg-color {
@@ -37,7 +35,7 @@ main {
     padding-left: 30px;
 
     border-radius: 20px;
-    background-color: var(--gris);
+    background-color: var(--bleu-gris);
 }
 
 #emploi-title-container {
@@ -120,6 +118,31 @@ main {
     }
 }
 
+#description-mobile {
+    display: none;
+    margin-top: -10px;
+    margin-right: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px black solid;
+
+    h3 {
+        font-size: 15px;
+        font-family: var(--montserrat-semibold);
+        color: var(--bleu-fonce);
+
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: normal;
+        font-family: var(--montserrat-medium);
+        color: black;
+        margin: 0;
+    }
+}
+
 #emploi-details {
     flex-grow: 1;
     margin-right: 20px;
@@ -156,7 +179,7 @@ main {
 }
 
 #emploi-details::-webkit-scrollbar {
-    background-color: var(--gris);
+    background-color: var(--bleu-gris);
     width: 12px;
 }
 #emploi-details::-webkit-scrollbar-thumb {
@@ -174,7 +197,7 @@ main {
     padding-left: 30px;
 
     border-radius: 20px;
-    background-color: var(--gris);
+    background-color: var(--bleu-gris);
 }
 
 #description-title {
@@ -201,14 +224,14 @@ main {
     // background-color: violet;
 }
 #description-text-container::-webkit-scrollbar {
-    background-color: var(--gris);
+    background-color: var(--bleu-gris);
     width: 12px;
 }
 #description-text-container::-webkit-scrollbar-thumb {
     background: var(--bleu-fonce); 
 }
 
-#description-text {
+.description-text {
     margin: 0 auto;
 
     padding-right: 10px;
@@ -248,8 +271,103 @@ main {
         font-family: var(--montserrat-regular);
         letter-spacing: 0.5px;
 
-        color: var(--white-pure);
-        background-color: var(--bleu-clair);
+        color: var(--Ivory_White);
+        background-color: var(--bleu-fonce);
+    }
+}
+
+#button-mobile-container {
+    display: none;
+}
+
+
+@media (max-width: 850px) or (max-height: 600px) {
+    main {
+        display: block;
+        height: auto;
+        padding: 20px 0;
+    }
+    #description {
+        display: none;
+    }
+
+    #emploi {
+        width: calc(100% - 40px);
+        margin: 0 20px;
+    }
+    #emploi-title-container {
+        #emploi-title {
+            width: 100%;
+            text-align: center;
+        }
+
+        #emploi-buttons {
+            display: none;
+        }
+    }
+
+    #description-mobile {
+        display: block;
+    }
+
+    #emploi-infos {
+        display: block;
+        padding: 20px 0;
+
+        .emploi-info-part {
+            width: 100%;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    #emploi-details {
+        padding-top: 30px;
+    }
+
+    #button-mobile-container {
+        margin-top: 20px;
+        height: 70px;
+        width: 100%;
+        padding: 0 40px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: var(--blanc-casse);
+
+        position: sticky;
+        bottom: 0;
+
+        #button-mobile {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+    
+            margin: 0 auto;
+    
+            height: 45px;
+            padding: 0 40px;
+            // padding: 10px 40px;
+    
+            border: none;
+            border-radius: 30px;
+    
+            font-family: var(--montserrat-regular);
+            letter-spacing: 0.5px;
+    
+            color: var(--Ivory_White);
+            background-color: var(--bleu-fonce);
+        }
+
+        #button-mobile-share, #button-mobile-mail {
+            height: 25px;
+        }
+        
+        svg {
+            height: 100%;
+        }
     }
 }
 
@@ -258,83 +376,41 @@ main {
 
 
 
-
-
-
-
-
-/* Fonts */
-
-@font-face {
-    font-family: PoppinsMd;
-    src: url(/static/fonts/Poppins/Poppins-Medium.ttf);
-}
-
-@font-face {
-    font-family: Pacifico;
-    src: url(/static/fonts/Pacifico/Pacifico-Regular.ttf);
-}
-
-@font-face {
-    font-family: Nobia-regular;
-    src: url(/static/fonts/Nobia/Nobia\ Regular.ttf);
-}
-
-@font-face {
-    font-family: Montserrat-Regular;
-    src: url(/static/fonts/Montserrat/static/Montserrat-Regular.ttf);
-}
-
-@font-face {
-    font-family: Montserrat-Medium;
-    src: url(/static/fonts/Montserrat/static/Montserrat-Medium.ttf);
-}
-
-@font-face {
-    font-family: Montserrat-Light;
-    src: url(/static/fonts/Montserrat/static/Montserrat-Light.ttf);
-}
-
-@font-face {
-    font-family: Montserrat-SemiBold;
-    src: url(/static/fonts/Montserrat/static/Montserrat-SemiBold.ttf);
-}
-
-@font-face {
-    font-family: Montserrat-Bold;
-    src: url(/static/fonts/Montserrat/static/Montserrat-Bold.ttf);
-}
-
-@font-face {
-    font-family: Multi;
-    src: url(/static/fonts/Multi/MultiText-Regular.otf);
-}
-
 /* Var */
 :root {
     /* colors */
-    --white-pure: #FFFFFF;
 
     --white: #D8D8D8;
+    --Ivory_White: #FDFDFD;
     --black: #4d504a;
-    --gris: #C3D2E1;
+
+    --noir-bleu: #002845;
+    --blanc-casse: #F8F9FC;
 
     --bleu-fonce: #1E3E89;
-    --bleu-clair: #7FCCF0;
-    --bleu-tres-clair: #CDDBF4;
+    --bleu-gris: #CDDBF4;
+    --bleu-clair: #E6FBFF;
+
+    --vert-medical: #1ABAB9;
+
+
+	--Charcoal_Gray: #333333;
+
+	--grey_border: #e1e1e1;
+	--grey: #84847C;
 
 
     /* fonts */
     --multi: Multi;
+
     --montserrat-medium: Montserrat-Medium;
     --montserrat-regular: Montserrat-Regular;
     --montserrat-light: Montserrat-Light;
     --montserrat-semibold: Montserrat-SemiBold;
     --montserrat-bold: Montserrat-Bold;
+    --montserrat-extrabold: Montserrat-ExtraBold;
+
     --nobia-regular: Nobia-regular;
     --pacifico: Pacifico;
     --poppins-md: PoppinsMd;
-
-    // others
-    --padding-glob: 40px;
 }

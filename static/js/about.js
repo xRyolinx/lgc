@@ -31,11 +31,15 @@ function carousel_title(object)
     title.setAttribute('style', "display: block !important; animation: visible 1.5s; opacity: 1");
 }
 
-// start
-document.addEventListener('DOMContentLoaded', function() {
-    // height of testimonials
+function adjust_height() {
     let height_testi = document.querySelector('#testimonials-total').clientHeight;
     document.querySelector('#testimonials').style.height = height_testi.toString() + 'px';
+}
+
+// start
+document.addEventListener('DOMContentLoaded', async function() {
+    // height of testimonials
+    adjust_height();
 
     // save testimonial's objects
     testimonial.object = document.getElementById('testimonials-total');
@@ -46,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // resize testimonials
     window.addEventListener('resize', () => {
         carousel_bg(testimonial);
+        adjust_height();
     });
 
 
@@ -86,4 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    // reajust
+    adjust_height();
 });

@@ -1,8 +1,6 @@
 body {
   position: relative;
-  background-image: url(/static/img/bg-with-colors.svg);
-  background-repeat: repeat-y;
-  background-size: cover;
+  background-color: var(--blanc-casse);
 }
 
 #bg-color {
@@ -28,6 +26,119 @@ main {
   width: 100%;
 }
 
+#pourquoi-app {
+  padding: 50px;
+  background-color: var(--blanc-casse);
+}
+
+#pourquoi-title {
+  padding-bottom: 20px;
+  margin: 0;
+  font-size: 30px;
+  font-family: var(--montserrat-bold);
+  text-align: center;
+  color: var(--noir-bleu);
+}
+
+#pourquoi-text {
+  font-size: 18px;
+  line-height: 35px;
+  font-family: var(--montserrat-regular);
+  color: var(--black);
+}
+
+#pourquoi-video {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 100%;
+  max-width: 700px;
+}
+#pourquoi-video iframe {
+  width: 100%;
+  aspect-ratio: 1.79;
+}
+#pourquoi-video i {
+  padding-top: 10px;
+  display: block;
+  text-align: center;
+}
+
+@media (max-width: 850px) {
+  #pourquoi-app {
+    padding: 50px 20px;
+  }
+}
+#appareil {
+  padding: 50px;
+  background-color: var(--Ivory_White);
+}
+
+#appareil-title {
+  display: none;
+  padding-bottom: 20px;
+  margin: 0;
+  font-size: 30px;
+  font-family: var(--montserrat-bold);
+  text-align: center;
+  color: var(--noir-bleu);
+}
+
+#appareil-infos {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+#appareil-text {
+  width: 60%;
+  margin-right: 100px;
+}
+#appareil-text h2 {
+  padding-bottom: 30px;
+  margin: 0;
+  font-size: 30px;
+  font-family: var(--montserrat-bold);
+  color: var(--noir-bleu);
+}
+#appareil-text p {
+  font-size: 18px;
+  line-height: 35px;
+  font-family: var(--montserrat-regular);
+  color: var(--black);
+}
+
+#appareil-img {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+#appareil-img img {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+@media (max-width: 850px) {
+  #appareil {
+    padding: 50px 20px;
+  }
+  #appareil-title {
+    display: block;
+  }
+  #appareil-text h2 {
+    display: none;
+  }
+  #appareil-infos {
+    flex-direction: column-reverse;
+  }
+  #appareil-img {
+    width: 100%;
+    margin: 30px 0;
+  }
+  #appareil-text {
+    width: 100%;
+  }
+}
 #bg-home {
   position: absolute;
   height: 100svh;
@@ -79,7 +190,7 @@ header .title-container .title1 {
   text-align: start;
   margin: 0;
   margin-bottom: 30px;
-  color: var(--white-pure);
+  color: white;
 }
 header .title-container .title2 {
   font-family: var(--montserrat-regular);
@@ -88,7 +199,7 @@ header .title-container .title2 {
   text-align: start;
   text-transform: uppercase;
   margin: 0;
-  color: var(--white-pure);
+  color: white;
 }
 
 @media (max-width: 992px) {
@@ -130,175 +241,155 @@ header .title-container .title2 {
     font-size: 18px;
   }
 }
-#testimonials-big-container {
+#app-dispo-container {
   width: 100%;
-  padding: 50px 20px;
-  overflow-x: hidden;
+  background: linear-gradient(-45deg, var(--Ivory_White), #5c7ecb);
 }
 
-#testimonials-container {
-  width: 100%;
+#app-dispo {
+  max-width: 1200px;
   margin: 0 auto;
-}
-
-#testimonials-title {
-  width: 100%;
-  margin-bottom: 40px;
-}
-#testimonials-title h1 {
-  width: 100%;
-  margin: 0;
-  font-size: 35px;
-  text-align: center;
-  font-family: var(--montserrat-semibold);
-  color: var(--bleu-fonce);
-}
-
-#testimonials {
-  position: relative;
-}
-
-#testimonials-total {
-  width: 300%;
-  padding: 40px 0;
-  position: absolute;
+  padding: 50px 50px;
   display: flex;
-  align-items: start;
+  justify-content: center;
+  align-items: stretch;
 }
 
-.testimonial {
-  opacity: 0;
-  width: 80%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
+#app-phone {
+  height: 400px;
+  width: 40%;
+  margin-right: 50px;
 }
-
-.testimonial-content q {
-  font-size: 18px;
-  font-family: var(--montserrat-regular);
-  letter-spacing: 1px;
-  line-height: 35px;
-  color: var(--black);
-}
-
-.testimonial-name {
-  width: 100%;
-  padding-top: 50px;
-}
-.testimonial-name i {
+#app-phone img {
   display: block;
-  width: 100%;
-  text-align: end;
-  font-size: 18px;
-  font-style: italic;
-  color: var(--bleu-fonce);
+  margin: 0 auto;
+  height: 100%;
+  aspect-ratio: 0.6;
 }
 
-#testimonials-buttons {
-  height: 30px;
-  width: 200px;
+#app-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-details-text h2 {
+  margin: 0;
+  font-size: 30px;
+  font-family: var(--montserrat-bold);
+  text-align: center;
+  color: var(--noir-bleu);
+}
+.app-details-text p {
+  margin: 15px 0;
+  text-align: center;
+  font-size: 25px;
+  font-family: var(--montserrat-bold);
+  color: var(--noir-bleu);
+}
+
+.app-buttons {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 400px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#testimonials-buttons p {
-  font-size: 40px;
-  font-weight: bold;
-  color: var(--bleu-fonce);
+.app-buttons .app-button {
+  height: 50px;
+}
+.app-buttons .app-button img {
+  height: 100%;
+  display: block;
+  margin: 0 auto;
   cursor: pointer;
 }
 
-@media (max-width: 900px) {
-  #testimonials-big-container {
-    padding-top: 50px;
-    padding-bottom: 50px;
+#app-details-text-mobile, #app-buttons-mobile {
+  display: none;
+}
+
+@media (max-width: 800px) and (min-width: 651px) {
+  #app-details .app-buttons {
+    flex-direction: column;
+    justify-content: center;
+  }
+  #app-details .app-buttons .app-button {
+    margin: 10px 0;
   }
 }
-@media (max-width: 700px) {
-  .testimonial-content q {
-    font-size: 19px;
+@media (max-width: 650px) {
+  #app-dispo {
+    flex-direction: column;
+    padding: 50px 20px;
   }
-  .testimonial-name i {
-    font-size: 17px;
+  #app-phone {
+    width: 100%;
+    margin: 80px auto;
   }
-}
-@media (max-width: 550px) {
-  .testimonial-content q {
+  #app-details .app-details-text {
+    display: none;
+  }
+  #app-details .app-buttons {
+    display: none;
+  }
+  #app-details-text-mobile {
+    display: block;
+  }
+  #app-details-text-mobile h2 {
+    font-size: 25px;
+  }
+  #app-details-text-mobile p {
+    margin-bottom: 0;
     font-size: 18px;
   }
-  .testimonial-name i {
-    font-size: 16px;
+  #app-buttons-mobile {
+    display: flex;
+    height: 45px;
+    max-width: 320px;
+    margin-top: 20px;
+  }
+  #app-buttons-mobile .app-button {
+    height: 100%;
   }
 }
-@media (max-width: 410px) {
-  .testimonial-content q {
-    font-size: 14px;
+@media (max-width: 360px) {
+  #app-buttons-mobile {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
   }
-  .testimonial-name i {
-    font-size: 12px;
+  #app-buttons-mobile .app-button {
+    height: 50px;
+    margin: 15px 0;
   }
-}
-@keyframes visible {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-/* Fonts */
-@font-face {
-  font-family: PoppinsMd;
-  src: url(/static/fonts/Poppins/Poppins-Medium.ttf);
-}
-@font-face {
-  font-family: Pacifico;
-  src: url(/static/fonts/Pacifico/Pacifico-Regular.ttf);
-}
-@font-face {
-  font-family: Nobia-regular;
-  src: url(/static/fonts/Nobia/Nobia\ Regular.ttf);
-}
-@font-face {
-  font-family: Montserrat-Regular;
-  src: url(/static/fonts/Montserrat/static/Montserrat-Regular.ttf);
-}
-@font-face {
-  font-family: Montserrat-Medium;
-  src: url(/static/fonts/Montserrat/static/Montserrat-Medium.ttf);
-}
-@font-face {
-  font-family: Montserrat-Light;
-  src: url(/static/fonts/Montserrat/static/Montserrat-Light.ttf);
-}
-@font-face {
-  font-family: Montserrat-SemiBold;
-  src: url(/static/fonts/Montserrat/static/Montserrat-SemiBold.ttf);
-}
-@font-face {
-  font-family: Multi;
-  src: url(/static/fonts/Multi/MultiText-Regular.otf);
 }
 /* Var */
 :root {
   /* colors */
-  --white-pure: #FFFFFF;
   --white: #D8D8D8;
+  --Ivory_White: #FDFDFD;
   --black: #4d504a;
-  --gris: #C3D2E1;
+  --noir-bleu: #002845;
+  --blanc-casse: #F8F9FC;
   --bleu-fonce: #1E3E89;
-  --bleu-clair: #7FCCF0;
-  --bleu-tres-clair: #CDDBF4;
+  --bleu-gris: #CDDBF4;
+  --bleu-clair: #E6FBFF;
+  --vert-medical: #1ABAB9;
+  --Charcoal_Gray: #333333;
+  --grey_border: #e1e1e1;
+  --grey: #84847C;
   /* fonts */
   --multi: Multi;
   --montserrat-medium: Montserrat-Medium;
   --montserrat-regular: Montserrat-Regular;
   --montserrat-light: Montserrat-Light;
   --montserrat-semibold: Montserrat-SemiBold;
+  --montserrat-bold: Montserrat-Bold;
+  --montserrat-extrabold: Montserrat-ExtraBold;
   --nobia-regular: Nobia-regular;
   --pacifico: Pacifico;
   --poppins-md: PoppinsMd;
-  --padding-glob: 40px;
 }/*# sourceMappingURL=home.css.map */

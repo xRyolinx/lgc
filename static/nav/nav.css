@@ -1,63 +1,34 @@
-/* Fonts */
-
-@font-face {
-    font-family: PoppinsMd;
-    src: url(/static/fonts/Poppins/Poppins-Medium.ttf);
-}
-
-@font-face {
-    font-family: Pacifico;
-    src: url(/static/fonts/Pacifico/Pacifico-Regular.ttf);
-}
-
-@font-face {
-    font-family: Nobia-regular;
-    src: url(/static/fonts/Nobia/Nobia\ Regular.ttf);
-}
-
-@font-face {
-    font-family: Montserrat-Regular;
-    src: url(/static/fonts/Montserrat/static/Montserrat-Regular.ttf);
-}
-
-@font-face {
-    font-family: Montserrat-Medium;
-    src: url(/static/fonts/Montserrat/static/Montserrat-Medium.ttf);
-}
-
-@font-face {
-    font-family: Montserrat-Light;
-    src: url(/static/fonts/Montserrat/static/Montserrat-Light.ttf);
-}
-
-@font-face {
-    font-family: Montserrat-SemiBold;
-    src: url(/static/fonts/Montserrat/static/Montserrat-SemiBold.ttf);
-}
-
-@font-face {
-    font-family: Multi;
-    src: url(/static/fonts/Multi/MultiText-Regular.otf);
-}
-
 /* Var */
 :root {
     /* colors */
-    --white-pure: #FFFFFF;
-
-    --white: #D8D8D8;
-    --black: #4d504a;
+    --blanc: #D8D8D8;
+    --noir: #4d504a;
     --gris: #C3D2E1;
 
+    --noir-bleu: #002845;
+    --blanc-casse: #F8F9FC;
+
     --bleu-fonce: #1E3E89;
+    --bleu-gris: #CDDBF4;
+    --bleu-clair: #E6FBFF;
+
+
+	--Charcoal_Gray: #333333;
+
+	--grey_border: #e1e1e1;
+	--grey: #84847C;
 
 
     /* fonts */
     --multi: Multi;
+
     --montserrat-medium: Montserrat-Medium;
     --montserrat-regular: Montserrat-Regular;
     --montserrat-light: Montserrat-Light;
     --montserrat-semibold: Montserrat-SemiBold;
+    --montserrat-bold: Montserrat-Bold;
+    --montserrat-extrabold: Montserrat-ExtraBold;
+
     --nobia-regular: Nobia-regular;
     --pacifico: Pacifico;
     --poppins-md: PoppinsMd;
@@ -138,7 +109,7 @@ nav {
     margin-right: 3rem;
 
     font-size: 1.5rem;
-    color: var(--white);
+    color: var(--blanc);
     text-decoration: none;
     text-align: start;
 }
@@ -165,8 +136,8 @@ nav {
 }
 .nav_el:hover, .nav_el_selected {
     /* font-weight: bold; */
-    border-bottom: 1.8px var(--white-pure) solid;
-    color: var(--white-pure);
+    border-bottom: 1.8px white solid;
+    color: white;
 }
 .nav_el:hover a {
     color: inherit;

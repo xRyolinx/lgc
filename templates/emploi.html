@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="/static/nav/nav.css">
     <script src="/static/nav/nav.js"></script>
 
+    <link rel="stylesheet" href="/static/footer/footer.css">
+
     <link rel="stylesheet" href="/static/css/emploi.css">
 </head>
 <body>
     <!-- bg -->
-    <img id="bg-color" src="/static/img/bg-with-colors.svg" alt="">
+    <!-- <img id="bg-color" src="/static/img/bg-with-colors.svg" alt=""> -->
 
     <!-- Nav -->
     <nav>
@@ -85,6 +87,19 @@
                 </ul>
             </div>
 
+            <!-- description-mobile -->
+            <div id="description-mobile">
+                <h3>Description</h3>
+                <p class="description-text">
+                    Plusieurs postes pour informaticiens et informaticiennes disponibles. La tache principale sera
+                    le développement, si vous êtes compétant dans au moins 2 langues de programmation vous pouvez
+                    nous rejoindre. Nous recherchons des informaticiens pour rejoindre notre équipe à Mila,
+                    Daïra Mila, Mila, Algérie. Les candidats doivent avoir une expérience dans le domaine
+                    de l'informatique, des systèmes d'information et être prêts à prendre en charge des
+                    responsabilités de responsable d'équipe.
+                </p>
+            </div>
+
             <!-- details -->
             <div id="emploi-details">
                 <article class="emploi-details-part">
@@ -123,7 +138,7 @@
             <p id="description-title">Description</p>
             <!-- text -->
             <div id="description-text-container">
-                <p id="description-text">
+                <p class="description-text">
                     Plusieurs postes pour informaticiens et informaticiennes disponibles. La tache principale sera
                     le développement, si vous êtes compétant dans au moins 2 langues de programmation vous pouvez
                     nous rejoindre. Nous recherchons des informaticiens pour rejoindre notre équipe à Mila,
@@ -138,7 +153,86 @@
             </div>
             
         </div>
+
+        <!-- button -->
+        <div id="button-mobile-container">
+            <div id="button-mobile-mail">
+                <svg viewBox="0 0 42 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 5L21 16L40 5" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M37.8889 2H4.11111C2.94518 2 2 2.92741 2 4.07143V28.9286C2 30.0726 2.94518 31 4.11111 31H37.8889C39.0548 31 40 30.0726 40 28.9286V4.07143C40 2.92741 39.0548 2 37.8889 2Z" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <div id="button-mobile">Postuler</div>
+
+            <div id="button-mobile-share">
+                <svg viewBox="0 0 32 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M26.6667 35C25.1852 35 23.9259 34.4896 22.8889 33.4688C21.8519 32.4479 21.3333 31.2083 21.3333 29.75C21.3333 29.5458 21.3481 29.3341 21.3778 29.1147C21.4074 28.8954 21.4519 28.6988 21.5111 28.525L8.97778 21.35C8.47407 21.7875 7.91111 22.1305 7.28889 22.379C6.66667 22.6275 6.01481 22.7512 5.33333 22.75C3.85185 22.75 2.59259 22.2396 1.55556 21.2188C0.518519 20.1979 0 18.9583 0 17.5C0 16.0417 0.518519 14.8021 1.55556 13.7812C2.59259 12.7604 3.85185 12.25 5.33333 12.25C6.01481 12.25 6.66667 12.3743 7.28889 12.6228C7.91111 12.8713 8.47407 13.2137 8.97778 13.65L21.5111 6.475C21.4519 6.3 21.4074 6.10342 21.3778 5.88525C21.3481 5.66708 21.3333 5.45533 21.3333 5.25C21.3333 3.79167 21.8519 2.55208 22.8889 1.53125C23.9259 0.510417 25.1852 0 26.6667 0C28.1481 0 29.4074 0.510417 30.4444 1.53125C31.4815 2.55208 32 3.79167 32 5.25C32 6.70833 31.4815 7.94792 30.4444 8.96875C29.4074 9.98958 28.1481 10.5 26.6667 10.5C25.9852 10.5 25.3333 10.3763 24.7111 10.129C24.0889 9.88167 23.5259 9.53867 23.0222 9.1L10.4889 16.275C10.5481 16.45 10.5926 16.6472 10.6222 16.8665C10.6519 17.0858 10.6667 17.297 10.6667 17.5C10.6667 17.7042 10.6519 17.9159 10.6222 18.1353C10.5926 18.3546 10.5481 18.5512 10.4889 18.725L23.0222 25.9C23.5259 25.4625 24.0889 25.1201 24.7111 24.8727C25.3333 24.6254 25.9852 24.5012 26.6667 24.5C28.1481 24.5 29.4074 25.0104 30.4444 26.0312C31.4815 27.0521 32 28.2917 32 29.75C32 31.2083 31.4815 32.4479 30.4444 33.4688C29.4074 34.4896 28.1481 35 26.6667 35ZM26.6667 7C27.1704 7 27.5929 6.832 27.9342 6.496C28.2756 6.16 28.4456 5.74467 28.4444 5.25C28.4444 4.75417 28.2738 4.33825 27.9324 4.00225C27.5911 3.66625 27.1692 3.49883 26.6667 3.5C26.163 3.5 25.7404 3.668 25.3991 4.004C25.0578 4.34 24.8877 4.75533 24.8889 5.25C24.8889 5.74583 25.0596 6.16175 25.4009 6.49775C25.7422 6.83375 26.1641 7.00117 26.6667 7ZM5.33333 19.25C5.83704 19.25 6.25956 19.082 6.60089 18.746C6.94222 18.41 7.1123 17.9947 7.11111 17.5C7.11111 17.0042 6.94044 16.5882 6.59911 16.2522C6.25778 15.9162 5.83585 15.7488 5.33333 15.75C4.82963 15.75 4.40711 15.918 4.06578 16.254C3.72444 16.59 3.55437 17.0053 3.55556 17.5C3.55556 17.9958 3.72622 18.4118 4.06756 18.7478C4.40889 19.0837 4.83081 19.2512 5.33333 19.25ZM26.6667 31.5C27.1704 31.5 27.5929 31.332 27.9342 30.996C28.2756 30.66 28.4456 30.2447 28.4444 29.75C28.4444 29.2542 28.2738 28.8383 27.9324 28.5023C27.5911 28.1663 27.1692 27.9988 26.6667 28C26.163 28 25.7404 28.168 25.3991 28.504C25.0578 28.84 24.8877 29.2553 24.8889 29.75C24.8889 30.2458 25.0596 30.6617 25.4009 30.9977C25.7422 31.3337 26.1641 31.5012 26.6667 31.5Z" fill="black"/>
+                </svg>
+            </div>
+        </div>
     
     </main>
+
+    <!-- footer -->
+    <footer>
+        <!-- details -->
+        <div id="footer_details">
+            <!-- follow me -->
+            <div id="footer-follow">
+                <div class="footer-title">
+                    <p id="footer-follow_me">Suivez-Nous</p>
+                </div>
+                <div id="footer-social">
+                    <!-- tiktok -->
+                    <svg viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    onclick="window.open('{{ about.lien_tiktok }}', '_blank');">
+                        <path d="M13.1002 2.82C12.4166 2.03962 12.0399 1.03743 12.0402 0H8.95016V12.4C8.92632 13.071 8.64303 13.7066 8.15992 14.1729C7.67682 14.6393 7.0316 14.8999 6.36016 14.9C4.94016 14.9 3.76016 13.74 3.76016 12.3C3.76016 10.58 5.42016 9.29 7.13016 9.82V6.66C3.68016 6.2 0.660156 8.88 0.660156 12.3C0.660156 15.63 3.42016 18 6.35016 18C9.49016 18 12.0402 15.45 12.0402 12.3V6.01C13.2932 6.90985 14.7975 7.39265 16.3402 7.39V4.3C16.3402 4.3 14.4602 4.39 13.1002 2.82Z"
+                        fill="#84847C"/>
+                    </svg>
+                    <!-- sep -->
+                    <div class="footer-separator"></div>
+                    <!-- facebook -->
+                    <svg viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    onclick="window.open('{{ about.lien_facebook }}', '_blank');">
+                        <path d="M7 11.5H9.5L10.5 7.5H7V5.5C7 4.47 7 3.5 9 3.5H10.5V0.14C10.174 0.0970001 8.943 0 7.643 0C4.928 0 3 1.657 3 4.7V7.5H0V11.5H3V20H7V11.5Z"
+                        fill="#84847C"/>
+                    </svg>
+                    <!-- sep -->
+                    <div class="footer-separator"></div>
+                    <!-- instagram -->
+                    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    onclick="window.open('{{ about.lien_insta }}', '_blank');">
+                        <path d="M5.8 0H14.2C17.4 0 20 2.6 20 5.8V14.2C20 15.7383 19.3889 17.2135 18.3012 18.3012C17.2135 19.3889 15.7383 20 14.2 20H5.8C2.6 20 0 17.4 0 14.2V5.8C0 4.26174 0.61107 2.78649 1.69878 1.69878C2.78649 0.61107 4.26174 0 5.8 0ZM5.6 2C4.64522 2 3.72955 2.37928 3.05442 3.05442C2.37928 3.72955 2 4.64522 2 5.6V14.4C2 16.39 3.61 18 5.6 18H14.4C15.3548 18 16.2705 17.6207 16.9456 16.9456C17.6207 16.2705 18 15.3548 18 14.4V5.6C18 3.61 16.39 2 14.4 2H5.6ZM15.25 3.5C15.5815 3.5 15.8995 3.6317 16.1339 3.86612C16.3683 4.10054 16.5 4.41848 16.5 4.75C16.5 5.08152 16.3683 5.39946 16.1339 5.63388C15.8995 5.8683 15.5815 6 15.25 6C14.9185 6 14.6005 5.8683 14.3661 5.63388C14.1317 5.39946 14 5.08152 14 4.75C14 4.41848 14.1317 4.10054 14.3661 3.86612C14.6005 3.6317 14.9185 3.5 15.25 3.5ZM10 5C11.3261 5 12.5979 5.52678 13.5355 6.46447C14.4732 7.40215 15 8.67392 15 10C15 11.3261 14.4732 12.5979 13.5355 13.5355C12.5979 14.4732 11.3261 15 10 15C8.67392 15 7.40215 14.4732 6.46447 13.5355C5.52678 12.5979 5 11.3261 5 10C5 8.67392 5.52678 7.40215 6.46447 6.46447C7.40215 5.52678 8.67392 5 10 5ZM10 7C9.20435 7 8.44129 7.31607 7.87868 7.87868C7.31607 8.44129 7 9.20435 7 10C7 10.7956 7.31607 11.5587 7.87868 12.1213C8.44129 12.6839 9.20435 13 10 13C10.7956 13 11.5587 12.6839 12.1213 12.1213C12.6839 11.5587 13 10.7956 13 10C13 9.20435 12.6839 8.44129 12.1213 7.87868C11.5587 7.31607 10.7956 7 10 7Z"
+                        fill="#84847C"/>
+                    </svg>
+                </div>
+                <p id="footer-miss_news">Pour ne rien rater!</p>
+            </div>
+            <div class="footer-divider"></div>
+            <!-- customer service -->
+            <div id="footer-customer">
+                <div class="footer-title">
+                    <p id="footer-custom_serv">Service Client</p>
+                </div>
+                <p><a href="{% url 'landing:about' %}">À Propos</a></p>
+                <p><a href="{% url 'landing:contact' %}">Contactez-Nous</a></p>
+                <p><a href="{% url 'landing:rdv' %}">Offres d'Emplois</a></p>
+            </div>
+            <div class="footer-divider"></div>
+            <!-- contact -->
+            <div id="footer-contact">
+                <div class="footer-title">
+                    <p id="footer-contact_now">Contacts</p>
+                </div>
+                <p>contact@lgc-dz.com</p>
+                <p>0669 29 58 62</p>
+            </div>
+        </div>
+        <!-- copy right -->
+        <div id="footer-copyright">
+            <p>&copy; 2023 Copyright - www.lgc-dz.com</p>
+        </div>
+    </footer>
 </body>
 </html>

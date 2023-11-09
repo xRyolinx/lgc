@@ -1,8 +1,6 @@
 body {
   width: 100%;
-  background-image: url(/static/img/bg-with-colors.svg);
-  background-repeat: repeat-y;
-  background-size: cover;
+  background-color: var(--blanc-casse);
 }
 
 #bg-color {
@@ -74,9 +72,10 @@ header {
   margin: 50px auto;
   padding: 30px 40px;
   border-radius: 50px;
-  background-color: var(--bleu-tres-clair);
+  background-color: var(--bleu-gris);
   display: flex;
   flex-direction: column;
+  box-shadow: 3px 3px 7px #9d9d9d;
 }
 
 .offre-title {
@@ -84,7 +83,7 @@ header {
   padding-right: 10px;
   font-size: 25px;
   font-family: var(--montserrat-semibold);
-  color: var(--bleu-fonce);
+  color: var(--noir-bleu);
   margin: 0;
 }
 
@@ -111,8 +110,8 @@ header {
   border-radius: 30px;
   font-family: var(--montserrat-regular);
   letter-spacing: 0.5px;
-  color: var(--white-pure);
-  background-color: var(--bleu-clair);
+  color: white;
+  background-color: var(--bleu-fonce);
 }
 
 .offre-plus-container {
@@ -128,7 +127,7 @@ header {
   color: var(--bleu-fonce);
 }
 .offre-plus-container p:active {
-  color: var(--black);
+  color: var(--noir-bleu);
 }
 
 @media (max-width: 500px) {
@@ -149,53 +148,21 @@ header {
     padding: 10px 35px;
   }
 }
-/* Fonts */
-@font-face {
-  font-family: PoppinsMd;
-  src: url(/static/fonts/Poppins/Poppins-Medium.ttf);
-}
-@font-face {
-  font-family: Pacifico;
-  src: url(/static/fonts/Pacifico/Pacifico-Regular.ttf);
-}
-@font-face {
-  font-family: Nobia-regular;
-  src: url(/static/fonts/Nobia/Nobia\ Regular.ttf);
-}
-@font-face {
-  font-family: Montserrat-Regular;
-  src: url(/static/fonts/Montserrat/static/Montserrat-Regular.ttf);
-}
-@font-face {
-  font-family: Montserrat-Medium;
-  src: url(/static/fonts/Montserrat/static/Montserrat-Medium.ttf);
-}
-@font-face {
-  font-family: Montserrat-Light;
-  src: url(/static/fonts/Montserrat/static/Montserrat-Light.ttf);
-}
-@font-face {
-  font-family: Montserrat-SemiBold;
-  src: url(/static/fonts/Montserrat/static/Montserrat-SemiBold.ttf);
-}
-@font-face {
-  font-family: Montserrat-Bold;
-  src: url(/static/fonts/Montserrat/static/Montserrat-Bold.ttf);
-}
-@font-face {
-  font-family: Multi;
-  src: url(/static/fonts/Multi/MultiText-Regular.otf);
-}
 /* Var */
 :root {
   /* colors */
-  --white-pure: #FFFFFF;
   --white: #D8D8D8;
+  --Ivory_White: #FDFDFD;
   --black: #4d504a;
-  --gris: #C3D2E1;
+  --noir-bleu: #002845;
+  --blanc-casse: #F8F9FC;
   --bleu-fonce: #1E3E89;
-  --bleu-clair: #7FCCF0;
-  --bleu-tres-clair: #CDDBF4;
+  --bleu-gris: #CDDBF4;
+  --bleu-clair: #E6FBFF;
+  --vert-medical: #1ABAB9;
+  --Charcoal_Gray: #333333;
+  --grey_border: #e1e1e1;
+  --grey: #84847C;
   /* fonts */
   --multi: Multi;
   --montserrat-medium: Montserrat-Medium;
@@ -203,8 +170,8 @@ header {
   --montserrat-light: Montserrat-Light;
   --montserrat-semibold: Montserrat-SemiBold;
   --montserrat-bold: Montserrat-Bold;
+  --montserrat-extrabold: Montserrat-ExtraBold;
   --nobia-regular: Nobia-regular;
   --pacifico: Pacifico;
   --poppins-md: PoppinsMd;
-  --padding-glob: 40px;
 }/*# sourceMappingURL=offres.css.map */

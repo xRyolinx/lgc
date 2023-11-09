@@ -1,35 +1,16 @@
-/* variables */
-:root {
-	// colors
-	--white: #FFFFFF;
-	--black: #4d504a;
-
-	--Rose_Gold: #B76E79;
-	--Ivory_White: #FDFDFD;
-	--Dusty_Rose: #D4A6B1;
-	--Charcoal_Gray: #333333;
-
-	--grey_border: #e1e1e1;
-	--grey: #84847C;
-
-    --beige-bg: #f4f0ed;
-
-	// sizes
-	--padding-glob: 40px;
-}
-
+// styles
 
 footer {
     // height: 250px;
-
     display: flex;
     flex-direction: column;
 
     border-top: 1px solid var(--grey_border);
-
-    // background-color: blue;
+    
+    font-family: var(--montserrat-medium);
     color: var(--grey);
-    font-family: CormorantGaramond-Medium;
+
+    background-color: var(--Ivory_White);
 }
 
 #footer_details {
@@ -50,6 +31,7 @@ footer {
         align-items: center;
 
         #footer-follow_me {
+            font-family: var(--montserrat-bold);
             font-weight: bold;
             text-align: center;
             margin: 0;
@@ -93,8 +75,8 @@ footer {
         }
 
         #footer-custom_serv {
+            font-family: var(--montserrat-bold);
             font-weight: bold;
-            box-sizing: border-box;
             margin: 0;
         }
         
@@ -105,6 +87,7 @@ footer {
             margin: 10px 0;
 
             color: var(--grey);
+
         }
     }
     // contact
@@ -119,6 +102,7 @@ footer {
         }
 
         #footer-contact_now {
+            font-family: var(--montserrat-bold);
             font-weight: bold;
             margin: 0;
         }
@@ -143,13 +127,16 @@ footer {
 }
 
 #footer-copyright {
-    text-align: center;
-    font-size: 13px;
     padding: 10px;
-
-
-    background-color: var(--beige-bg);
+    
+    font-size: 13px;
+    text-align: center;
+    // color: var(--Ivory_White);
     color: var(--black);
+
+    // background-color: var(--bleu-fonce);
+    // background-color: #5c7ecb;
+    background-color: var(--blanc-casse);
 
 
     p {
@@ -181,4 +168,46 @@ footer {
             height: 45px;
         }
     }
+}
+
+
+
+
+/* Var */
+:root {
+    /* colors */
+
+    --white: #D8D8D8;
+    --Ivory_White: #FDFDFD;
+    --black: #4d504a;
+
+    --noir-bleu: #002845;
+    --blanc-casse: #F8F9FC;
+
+    --bleu-fonce: #1E3E89;
+    --bleu-gris: #CDDBF4;
+    --bleu-clair: #E6FBFF;
+
+    --vert-medical: #1ABAB9;
+
+
+	--Charcoal_Gray: #333333;
+
+	--grey_border: #e1e1e1;
+	--grey: #84847C;
+
+
+    /* fonts */
+    --multi: Multi;
+
+    --montserrat-medium: Montserrat-Medium;
+    --montserrat-regular: Montserrat-Regular;
+    --montserrat-light: Montserrat-Light;
+    --montserrat-semibold: Montserrat-SemiBold;
+    --montserrat-bold: Montserrat-Bold;
+    --montserrat-extrabold: Montserrat-ExtraBold;
+
+    --nobia-regular: Nobia-regular;
+    --pacifico: Pacifico;
+    --poppins-md: PoppinsMd;
 }
