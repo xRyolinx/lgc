@@ -149,6 +149,9 @@ header {
         color: white;
         background-color: var(--bleu-fonce);
     }
+    .offre-button:active {
+        background-color: var(--noir-bleu);
+    }
 }
 
 .offre-plus-container {

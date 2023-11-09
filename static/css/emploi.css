@@ -206,6 +206,9 @@ main {
   color: var(--Ivory_White);
   background-color: var(--bleu-fonce);
 }
+.emploi-description-button-container .emploi-description-button:active {
+  background-color: var(--noir-bleu);
+}
 
 #button-mobile-container {
   display: none;
@@ -271,6 +274,9 @@ main {
     letter-spacing: 0.5px;
     color: var(--Ivory_White);
     background-color: var(--bleu-fonce);
+  }
+  #button-mobile-container #button-mobile:active {
+    background-color: var(--noir-bleu);
   }
   #button-mobile-container #button-mobile-share, #button-mobile-container #button-mobile-mail {
     height: 25px;
